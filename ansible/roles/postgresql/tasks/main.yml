@@ -1,0 +1,6 @@
+---
+- include: repo.yml
+- include: package.yml
+- include: config.yml
+- include: user.yml
+- include: database.yml

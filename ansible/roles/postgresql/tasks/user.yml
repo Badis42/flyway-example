@@ -1,0 +1,6 @@
+---
+- name: create postgresql user
+  postgresql_user: name={{ item.name }} password={{ item.password }} role_attr_flags=LOGIN,CREATEDB,NOSUPERUSER
+  with_items:
+    - { name: 'app', password: 'app' }
+  become_user: postgres

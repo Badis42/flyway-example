@@ -1,0 +1,8 @@
+---
+- name: copy postgresql config
+  template: src={{ item.src }} dest={{ item.dest }}
+  with_items:
+    - { src: postgresql/pg_hba.conf.j2, dest: /etc/postgresql/9.5/main/pg_hba.conf }
+    - { src: postgresql/postgresql.conf.j2, dest: /etc/postgresql/9.5/main/postgresql.conf }
+  notify:
+    restart postgresql
