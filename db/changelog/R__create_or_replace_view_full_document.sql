@@ -4,7 +4,7 @@ drop view if exists full_document;
 
 create view full_document as
   select
-    id,
-    name,
-    value
-  from document;
+    d.id    document_id,
+    d.name  document_name,
+    d.value document_value
+  from document d;
