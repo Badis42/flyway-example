@@ -1,0 +1,19 @@
+---
+- name: ensure flyway is downloaded
+  stat: path=/tmp/flyway.tar.gz
+  register: st
+
+- name: download flyway
+  get_url:
+    url: https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/4.0/flyway-commandline-4.0-linux-x64.tar.gz
+    dest: /tmp/flyway.tar.gz
+    mode: 0644
+  when:
+    st.exists is not defined
+
+- name: create flyway installation directory
+  file: name=/opt/flyway/ state=directory owner=vagrant group=vagrant
+
+- name: install flyway
+  shell: tar xf /tmp/flyway.tar.gz -C /opt/flyway/ --strip-components 1
+  become_user: vagrant
