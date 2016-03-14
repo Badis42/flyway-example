@@ -15,5 +15,8 @@
   file: name="{{ flyway.directory }}" state=directory owner=vagrant group=vagrant
 
 - name: install flyway
-  shell: tar xf "{{ flyway.download_path }}" -C "{{ flyway.directory }}" --strip-components 1
+  shell: |
+    tar xf "{{ flyway.download_path }}" -C "{{ flyway.directory }}" --strip-components 1
+  args:
+    warn: no
   become_user: vagrant
