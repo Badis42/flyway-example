@@ -1,5 +1,5 @@
 -- drop and create is workaround for postgres,
--- which can't recreate view with differnt set of columns.
+-- which can't recreate view with different set of columns.
 drop view if exists full_document;
 
 create view full_document as
