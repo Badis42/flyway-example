@@ -4,6 +4,7 @@ This repo contains `ansible`-provisioned `vagrant` box with `flyway` and example
 
     $ vagrant up
     $ vagrant ssh
+    $ cd /vagrant
     $ flyway info
     $ flyway migrate
     $ flyway info
