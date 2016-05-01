@@ -2,7 +2,7 @@ Vagrant.require_version '>= 1.8.1'
 
 $ansible_local_workaround = <<ANSIBLE_LOCAL_WORKAROUND
 apt-get update
-apt-get install -y python-pip python-dev
+apt-get install -y python-pip python-dev libffi-dev libssl-dev
 pip install ansible==1.9.2
 cp /usr/local/bin/ansible /usr/bin/ansible
 ANSIBLE_LOCAL_WORKAROUND
