@@ -1,4 +1,4 @@
--- workaround in comments doesn't works;
+-- workaround in comments doesn't work;
 
 /*
 commit;
