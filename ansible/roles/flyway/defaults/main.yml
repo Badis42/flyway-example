@@ -1,5 +1,5 @@
 ---
 flyway:
-  download_url: https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/4.0/flyway-commandline-4.0-linux-x64.tar.gz
+  download_url: https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/4.0.1/flyway-commandline-4.0.1-linux-x64.tar.gz
   download_path: /tmp/flyway.tar.gz
   directory: /opt/flyway/
